@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/css/profile.css" media="all">
+  </head>
+  <body>
+    <div id="main">
+
+      <div id="content">
+        <div class="panel">
+          <div class="header">
+            <ul class="breadcrumb">
+              <li>
+                <a>主页</a>
+                <span class="divider">/</span></li>
+            </ul>
+          </div>
+          <div class="inner userinfo">
+            <div class="user_big_avatar">
+              <img src="{{ user.image }}" class="user_avatar">
+            </div>
+            <a class="dark">{{ user.username }}</a>
+
+            <p class="col_fade">注册时间 7 年前</p>
+
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="header">
+            <span class="col_fade">最近创建的话题</span>
+          </div>
+          {% for r in topic %}
+            <div class="cell">
+
+              <a class="user_avatar pull-left">
+                <img src="{{ user.image }}">
+              </a>
+
+              <span class="reply_count pull-left">
+                <span class="count_of_replies" title="回复数">
+                  12
+                </span>
+                <span class="count_seperator">/</span>
+                <span class="count_of_visits" title="点击数">
+                  3495
+                </span>
+              </span>
+
+
+
+              <div class="topic_title_wrapper">
+
+                <a class="topic_title" href="{{ url_for('topic.detail', id=r.id) }}">
+                  {{ r.title }}
+                </a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="panel">
+          <div class="header">
+            <span class="col_fade">最近参与的话题</span>
+          </div>
+          {% for r in reply %}
+            <div class="cell">
+
+              <a class="user_avatar pull-left">
+                <img src="{{ user.image }}" title="ITCNZ">
+              </a>
+
+              <span class="reply_count pull-left">
+                <span class="count_of_replies" title="回复数">
+                  3
+                </span>
+                <span class="count_seperator">/</span>
+                <span class="count_of_visits" title="点击数">
+                  505
+                </span>
+              </span>
+
+
+
+              <div class="topic_title_wrapper">
+
+                <a class="topic_title" href="{{ url_for('topic.detail', id=r.id) }}">
+                  {{ r.title }}
+                </a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

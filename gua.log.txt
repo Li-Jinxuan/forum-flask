@@ -1,0 +1,4 @@
+00:40:33 kwargs,  {'sender_id': 1} <class 'dict'>
+00:40:33 kwargs,  {'receiver_id': 1} <class 'dict'>
+01:15:29 kwargs,  {'sender_id': 1} <class 'dict'>
+01:15:29 kwargs,  {'receiver_id': 1} <class 'dict'>
