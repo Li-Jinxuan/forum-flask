@@ -22,14 +22,14 @@ def main():
     # Test.usrename
 
     User.new(
-        username='gua',
+        username='test',
         password='123',
         image='/static/images/1.jpg',
         signature='sssss',
     )
 
     User.new(
-        username='guagua',
+        username='testtest',
         password='123',
         image='/static/images/3.jpg',
         signature='bbbbbb',
